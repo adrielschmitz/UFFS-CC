@@ -1,0 +1,7 @@
+create table aluno( int id, varchar[30] nome, char[20] numero)
+insert into aluno( 30, leonardo, +5549991601203)
+insert into aluno( 20, adriel, +5549998058710)
+select * from aluno
+delete from aluno where id = 20
+select * from aluno
+exit+

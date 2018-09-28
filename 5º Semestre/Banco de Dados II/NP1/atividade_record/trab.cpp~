@@ -1,0 +1,24 @@
+#include <cstdio>
+#include <cstring>
+
+using namespace std;
+#define MAX 123
+
+
+int main(){
+	int i;
+	char in[MAX], palavra[MAX][MAX];
+	memset(palavra, -1, sizeof(palavra));
+	while(strcmp(palavra[0],"create") || strcmp(palavra[1], "table")){
+		printf("Crie uma tabela inserindo os dados corretamente!!\n");
+		fgets(in, MAX, stdin);	
+		sscanf(in, "%s %s", palavra[0], palavra[1]);
+	}
+	for(i = 0; i < (int)strlen(in); i++)
+		if(in[i] == '(' || in[i] == ')' || in[i] == '[' || in[i] == ']' || in[i] == ',')
+			in[i] = ' ';
+		else if(in[i] == '\n')
+			in[i] = '\0';
+
+	return 0;
+}

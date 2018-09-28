@@ -1,0 +1,20 @@
+Este exemplo mostra como utilizar leds.
+
+O exemplo tem um único led, que pisca (acende e apaga)
+continuamente. O intervalo de tempo é marcado usando um loop.
+
+Para executar, use o montador
+
+arm-none-eabi-as -o test.o test.s
+
+depois o ligador
+
+arm-none-eabi-ld -T mapa.lds -o test test.o
+
+obtendo o arquivo executável de nome "test".
+
+Então inicie o simulador
+
+armsim -l test -d devices.txt
+
+No simulador, execute "g _start".

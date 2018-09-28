@@ -1,0 +1,14 @@
+# arquivo de configuração de dispositivos para o simulador
+
+#%leds On/Off
+#rrrr 0x90110
+
+%buttons Comando
+Start 0x90000 7 P
+Stop 0x90001 7 P
+
+%timer
+0x90008 6
+
+%7segs DISPLAY
+0xa0000

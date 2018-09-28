@@ -1,0 +1,22 @@
+Este exemplo mostra como utilizar o mostrador de sete segmentos
+e o teclado, sem usar interrupções.
+
+O exemplo tem um teclado e um mostrador de sete segmentos. A cada
+vez que uma tecla é pressionada no teclado o mostrador é atualizado
+para mostrar o valor da tecla.
+
+Para executar, use o montador
+
+arm-none-eabi-as -o test.o test.s
+
+depois o ligador
+
+arm-none-eabi-ld -T mapa.lds -o test test.o
+
+obtendo o arquivo executável de nome "test".
+
+Então inicie o simulador
+
+armsim -l test -d devices.txt
+
+No simulador, execute "g _start".

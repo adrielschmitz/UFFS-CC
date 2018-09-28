@@ -1,0 +1,15 @@
+Este exemplo mostra como utilizar a chamada ao sistema read.
+sem utilizar interrupções.
+
+O exemplo tem um led, que alterna entre ligado e desligado a cada certo
+número de ciclos de um loop (constante INTERVAL).
+
+Para executar, compile
+
+arm-as test.s -o test.exe
+
+e inicie o simulador
+
+jarm -l test.exe -d devices.txt
+
+No simulador, execute "g main".

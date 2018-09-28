@@ -1,0 +1,35 @@
+QUALIDADE DE SOFTWARE:
+	Conjunto de características a serem satisfeiras em um determinado grau que atenda 	as necessidades do cliente.
+	MULTIPLAS FACETAS:
+		Usabilidade, confiabilidade, eficiência, manutabilidade, portabilidade, segurança, produtividade...
+	QUALIDADE DO PROCESSO:
+		Qualidade do produto -> relacionado -> Qualidade do processo
+		Artefato de software		              Ciclo de vida
+	
+	a) Processos bem estabelecidos, incorporando mecanismo sistematicos... Conduzem um produto de qualidade
+	b) Problemas no processos, provavelmente, geram defeitos no produto.
+	c) Um bom processo nao garante que o produto seja excelente, mas é um bom indicativo, que está no caminho certo.
+	d) A competência em controlar o processo de software influencia na capacidade da organizazção de atingir metas de custo, qualidade...
+	Processo?:
+			Conjunto de atividades, métodos, práticas e transformações que guiam pessoas...
+		PROCESSO IMATURO:
+			Improvisado; Fortemente dependente dos profissionais; Indisciplinado.
+		PROCESSO MADURO: 
+			- Conhecido e seguido por todos da equipe; 
+			- Apoio visível da alta administração; 
+			- Medidas do produto e do processo; 
+			- Adoção disciplinada de tecnologias.
+	QUALIDADE X PRODUTIVIDADE:
+		Obj da eng de soft é melhorar a qualidade dos produtos de softwares e aumentar a produtividade no processo de desenvolvimento
+
+	MODELOS DE QUALIDADE:
+		- CMMI; - MPS.BR
+		
+	NÍVEIS DE MATURIDADE E PROCESSOS MPS-BR: (pirâmide, a menos significativo)
+		a) Otimização
+		b) Gerenciamento de quantitatividade
+		c) Definido
+		d) Largamente definido
+		e) Parcialmente definido
+		f) Gerenciamento
+		g) Parcialmente gerenciado (gerencia de requisitos, de projetos)

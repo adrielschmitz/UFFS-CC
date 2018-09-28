@@ -1,0 +1,188 @@
+    QEMU: https://pdos.csail.mit.edu/6.828/2012/tools.html
+    https://github.com/mit-pdos/xv6-public
+    cartilha: https://pdos.csail.mit.edu/6.828/2012/xv6/xv6-rev7.pdf
+    blog indiano: http://recolog.blogspot.com.br/2016/02/installing-and-running-xv6-operating.html?m=1
+
+    SISTEMA OPERACIONAL PROTEGIDO:
+        Kernel: Sistema operacional ou procesos do sistema operacional
+        Usuário: Nao interfere no kernel, tem uma limitação, quando tenta executar a nivel de kernel é abortado
+    STACK --> DATA --> HEAP --> CODE (ESTRUTURA EM 4 NÍVEIS)
+    PID = IDENTIFICADOR DO PROCESSO
+    PROCESSO:
+        Nada mais é que um agrupamento de recursos
+    THREAD:
+        Entidades escalonadas que executam sobre a CPU
+
+    Sistemas preemptivos:é o ato de interromper temporariamente uma tarefa sendo resolvida por um sistema computacional, 
+        sem precisar de sua cooperação, e com a intenção de retomar a tarefa depois. Tal mudança é conhecida como uma troca 
+        de contexto. É normalmente resolvida por uma tarefa privilegiada ou parte de um sistema conhecido como uma agenda 
+        preemptiva, que tem o poder de preeminar, ou interromper, e depois retomar, outras tarefas no sistema.
+   
+    Nao-preemptivos: 
+        Uso exclusivo, quem detẽm o recurso, ele sim pode solicitar mais recurso e ele mesmo pode bloquear... 
+        Se ele bloqueia, os recursos que ele tem ficam intocáveis, até que ele termine o que tem que fazer e 
+        libere os recursos utilizados..
+    
+    Uma opção nao bloqueante: 
+        Retorna o porquẽ o recurso nao está disponível...
+    Inanição: 
+        Quando um escalonador executa uma fila de prioridade, por exemplo, e a demanda dos 
+        processos nunca vai para os outros processos de prioridade menor.
+    Sistema operacinais: Servir os processos, o que será feito com esses processos, foda-se, nao é problema do S.O
+    
+    Sistema chamado deadlocks ou, "Abraço Mortal": 
+        Um conjunto de processos está em situação de deadlocks se todo processo pertencente ao conjunto estiver esperando 
+        por um evento que somente um processo desse mesmo conjunto poderá fazer.Ou seja, é quando um processo 1 usa um o 
+        recurso A, processo 2 usa o recurso B, o A pede o o recurso B e o B pede o recurso A, ambos serão bloqueados.
+
+    EXCLUSÃO MUTUA: 
+        Para evitar que dois processos ou threads tenham acesso simultaneamente a um recurso 
+        compartilhado, acesso esse denominado por região crítica.
+
+    Condição de espera cicular: 
+        Quem tem o recurso pelo qual estou esperando... A --> B
+       - Processo A está esperando recursos do processo B. Isso é um ciclo, com isso, com certeza tem-se um deadloks.
+       - Um algorítmo para saber se tem deadlocks é saber se tem um ciclo no grafos, utiliza-se busca em profundidade.
+        (A)-->[R] processo A está esperando o recurso R
+        (A)<--[R] processo A está utilizando o recurso R
+
+    Sistema em tempo real: Exemplo, um sistema que monitora os batimentos cardíacos de um paciente, ele precisa de exclusividade,
+        precisa ter um processo que ninguem vá mexer, que nao terá interrupções. 
+
+    Algoritmo do avestruz: Ignora, finge que nunca vai acontecer kkkk
+    recuperação do deadlocks: 
+        1.Recuperação de preempção, retiro os recursos deles... 
+        2.Mata o processo, o que está a menos tempo esperando.
+
+    --------------------------------------------------------------------------------------------------------------- 06/04
+    Estados seguros e inseguros 
+        - Algorítmo do banqueiro: verifica se há uma sequencia de atendimento que permite atender a todos os clientes (Fazer o exercício)
+        - Estudar sobre prevenção de deadlock (lance dos arquivos numerados e garantir que a solicitação sempre seja em ordem crescente)
+        - bueno 
+            - trylock = Se conseguir, entra na região crítica... se nao, entra depois. 
+            - livelock = verifica de tempo em tempo que a condição seja satisfeita... e fica fazendo outras coisas enquanto espera
+
+*trabalho: Quando o processo fica bloqueado, o bilhete que está com ele fica indisponível, pois ele nao está pronto ainda!
+*depois que desbloqueia esse processo, os bilhetes voltam ao pool para que esses bilhetes sejam sorteados de novo. 
+
+    ---------------------------------------------------------------------------------------------------------------- 10/04
+GERENCIAMENTO DE MEMÓRIA:
+    PAGE FOUND:
+        ELA EXISTE, MAS NAO ESTÁ NA MEMÓRIA FISICA, ESTÁ EM DISCO.
+    **A memória do sistema operacional jamais pode ir pro swape, ela fica amarrada lá, intacta**
+    Nao é interessante carreagar endereços de memória estática, pode ser que outro programa esteja usando aquele espaço de memória tbm.
+    BITMAP
+        1 indica ocupado, 0 vazio. Cada bit representa um bloco.... Para saber onde está cada bloco vazio deve-se percorrer o bitmap
+        (ruim: consulta mais generosa, pode ser que eu use mais memória do que esteja usando). 
+        
+    LISTA ENCADEADA:
+        h indica livre(pior consulta, porém o tamanho é menor). [p 0 5]: existe um processo que está na posição 0 e usa 5 bloquinhos de memória.
+        
+    MEMÓRIA VIRTUAL(Paginação):
+        Quando se gera um executável: O programa tem a impressão que toda a memória é dele(64bits)
+        Caso faltar espaço na memória cache, a cache faz um swape com a memória ram, é como se ela estendesse a memória cache.
+        MMU:
+            Faz a tradução, transforma o endereço lógico em um físico à memória.
+        TABELA DE PAGINAS:
+            - PAGE FAULT:
+                Falta de pagina na tabela de paginas, significa que ela está em disco indicar onde estão 
+                carregados os dados na memória. Existe uma série de atributos, flags indicando se posso executar,
+                tamanho e etc...
+
+            -------------------------------------------------------------------------------------------------------- 17/04
+            DICA = FAZER VETORES UM ATRÁS DO OUTRO E FAZER ACESSOS INDEVIDOS À MEMÓRIA
+            FRAME = memória física
+            QUADRO = memória virtual
+            Presente/ausente = está na memória fisica/está carregada fisicamente (1/0)
+            REFERENCIADA = Está sendo usada
+            EM PRETO(ESPAÇO RESERVADO PARA O FUTURO) = vai que a arquitetura faz umas modificações, 
+            esses bits são usados para se fazer mudanças. Sem ela, teria que mudar toda a arquitetura
+
+        MEMÓRIA ASSOCIATIVA(TLB):
+            Tem-se uma entrada e é associada a uma saída. Como é mais cara, ela tem um tamanho reduzido.
+            Mais entradas, mais custo. 
+            logico -> físico
+            Caso esteja ausente, consulta o diretório, tabela de página.
+
+        TABELA DE PAGINAS INVERTIDAS:
+            **DICA = ESTUDAR OCTAL PARA BINÁRIO**
+            Nao é aceitável aumentar o número de níveis!!
+            2^30 = quantos quadros?
+            2^12 = 1 quadro
+            (2^30 / 2^12) = 2^18 quadros
+
+            Onde está a página virtual 15 do processo 10... É isso que se é feito em arquiteturas de 64bits
+
+            vpn = virtual page number
+            Cada índice tenho o endereço do quadro.
+
+            DIFERENÇA 32 E 64:
+                32 = uma tabela de páginas para cada processo
+                64 = tem uma tabelona pra todos
+  
+        ALGORITMOS DE SUBSTITUÍÇÃO DE PÁGINAS:
+            NUR
+                Referencia por clases e tenta escolher o que está nao referenciada e nao modificada.
+                Olho pra classe modificada, depois olho pra referenciado
+            PRIMEIRA A ENTRAR PRIMEIRA A SAIR
+                Quando ela foi referenciada, dá uma segunda chance pra pagina e coloca no final da fila.
+            RELOGIO:
+                R em 0 retira a pagina = vai andando pra direita e olha onde o ponteiro está
+            MRU:
+                Retira a que há mais tempo nao foi usada.
+                Extremamente custoso = eu teria que ter um times temp pra cada acesso, cada pagina.
+                MATRIZ
+                    Zerada a cada fatia de tempo (na linha em 1 e a coluna em 0)
+                    0 0 0      1 0 0       0 0 0 
+                    0 0 0  --> 1 0 0  -->  1 0 0
+                    0 0 0      1 0 0       1 0 0
+                CONTADORES
+                    atualizado a cada fatia de tempo
+                    É o lance lá de girar uma vez pra direita, atualiza o bit mais significativo pra 1 e etc
+                Contudo, ainda assim nao se tem a pagina ao certo que foi a mais tempo usada.
+        WORKING SET:
+            Tamanho de memória máximo que certo programa vai usar.
+            Exemplo: Meu programa usará 2gb de memória. Mesmo que no início ele só use 900kb, 
+                     o máximo que ele poderá usar será os 2gb.
+
+        ------------------------------------------------------------------------------------------------------------- 20/04
+        THRASHING DE MEMÓRIA:
+            **  É a situação onde uma grande quantidade de recurso computacional é utilizada para fazer uma quantidade 
+                mínima de trabalho, com o sistema em um estado contínuo de contenção de recursos **
+            PAGE FAULT:
+                Falta de pagina na tabela de paginas, significa que ela está em disco
+            Tamanho da pagina:
+                Fragmentação interna:  
+                    Sempre sobra um pedacinho em cada pagina que os procesos nao usaram. 
+                Menor o tamanho de página maior a quantidade de entradas na tabela de pagina, porém, fragmentação maior e vice e versa.
+                N stancias compartilham o mesmo código, já no endereçamento dos dados é outra história
+                Quando se gera um pagefalt todas as instrução terá que ser retomada desde o início.
+
+            ESPAÇO DE SWAPE:
+                A vantagem da figura dois é que ela economiza o espaço de swape, porém, deve ser escrita em disco mesmo se seja
+                alterado ou nao, nao tem uma cópia no disco, tem que ser enviada pra lá. Já na primeira utiliza mais espaço de
+                swape, porém, ela só marca em 0 na tabela de pagina indicando que nao está mais disponível na tabela, porém, já está
+                em disco, nao precisa ser copiada de novo.
+            
+            SEGMENTAÇÃO:
+                Aloca exatamente o que se quer:
+                    Vantagem: Nao tem fragmentação interna.
+                    Desvantagem: São alocados bites em seguida, nao dá pra usar, por exemplo, dois pedaços de 3k se eu preciso de 4k
+                    mesmo que tenha 6k, mas esses slots nao estão em seguidas, daí entrar a 
+                    Compactação:
+                        Juntar os espaços vazios para futuramente ser usado
+                        Desvantagem: Tem que reaponteirar todos os endereços e enquanto faço isso nao dá pra ficar fazendo outra coisa, tem que se dedicar pra aquilo.
+
+
+--------------------------------------------------------------------------------------------------------------------- 27/04
+TRABALHO 2: izi pizi, exemplo feito no quadro.
+
+TRATAMENTO DE ENTRADA E SAÍDA:
+    INTERRUPÇÕES REVISITADAS:
+        Disoposítivos a níveis de bloco (disco rígido por exemplo), ao invés de alterar só um caractere, ele reessreve o bloco todo.
+
+    **Cada interrupção tem um determinado ID. Ex: É da impressora, ela informa um id e a partir dela eu sei o que devo fazer.**
+    
+    Bloqueante: Assíncrona
+    Não-bloqueante: Síncrona
+    

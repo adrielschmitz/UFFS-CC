@@ -1,0 +1,18 @@
+CREATE OR REPLACE FUNCTION process_emp_audit() RETURNS TRIGGER AS $$
+ 	BEGIN
+		IF (TG_OP = 'DELETE') THEN
+			INSERT INTO emp_audit SELECT 'D', now(), user, OLD.*;
+			RETURN OLD;
+		ELSIF (TG_OP = 'UPDATE') THEN
+			INSERT INTO emp_audit SELECT 'U', now(), user, NEW.*;
+			RETURN NEW;
+		ELSIF (TG_OP = 'INSERT') THEN
+			INSERT INTO emp_audit SELECT 'I', now(), user, NEW.*;
+			RETURN NEW;
+		END IF;
+		
+		RETURN NULL;
+ 	END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER emp_audit AFTER INSERT OR UPDATE OR DELETE ON emp FOR EACH ROW EXECUTE PROCEDURE process_emp_audit();

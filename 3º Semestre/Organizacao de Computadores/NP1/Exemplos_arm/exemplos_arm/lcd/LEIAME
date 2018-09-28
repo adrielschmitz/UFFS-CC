@@ -1,0 +1,25 @@
+Este exemplo mostra como utilizar o LCD e um timer com interrupções.
+
+O exemplo tem um LCD que é usado para mostrar uma mensagem, e um
+timer. A cada intervalo do timer, a mensagem se desloca para a
+direita, continuamente.
+
+Para garantir que o ligador monte o vetor de interrupções no local
+correto (início da memória) é necessário passar um arquivo de mapa de
+memória para o ligador (linker.txt), usando a opção -T.
+
+Para executar, use o montador
+
+arm-none-eabi-as -o test.o test.s
+
+depois o ligador
+
+arm-none-eabi-ld -T mapa.lds -o test test.o
+
+obtendo o arquivo executável de nome "test".
+
+Então inicie o simulador
+
+armsim -l test -d devices.txt
+
+No simulador, execute "g _start".

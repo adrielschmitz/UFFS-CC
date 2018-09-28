@@ -1,0 +1,8 @@
+1° Todos os posts que o usuário 'Preets' votou;
+EXPLAIN ANALYZE SELECT u.displayname, posts.title from posts JOIN votes ON posts.id = votes.postid JOIN (SELECT users.id, users.DisplayName from users WHERE users.DisplayName = 'Preets') as U ON U.id = votes.userid;
+
+2° Quantidade de comentários que cada usuário postou;
+EXPLAIN ANALYZE SELECT users.DisplayName, COUNT(comments.id) FROM users JOIN comments ON users.id = comments.UserId GROUP BY(comments.id);
+
+3º Quantidade de comentários que o usuário 'Preets' postou;
+EXPLAIN ANALYZE SELECT users.displayname, COUNT(comments.id) FROM users JOIN comments ON users.id = comments.userid WHERE users.displayname = 'Preets' GROUP BY(users.id);

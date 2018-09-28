@@ -1,0 +1,25 @@
+/*delete from tabprodutos  where codproduto = '2' */ // deleta da tabela tabprodutos no campo codprodutos na linha 2
+
+/*insert into tabprodutos ( values (2, 'LEITE') ) // insere
+
+/*select * from tabprodutos */ //mostrar a tabela tabprodutos
+
+create table TabAlmox(
+	codAlmox Integer,
+	descAlmox Varchar(40),
+	Constraint PK_Almox primary key(codAlmox /*(aqui vai o nome novo que eu quero)*/) 
+) // criação de tabela
+
+create table tabProdutos(
+	codProdutos integer,
+	descprodutos varchar(40),
+	CodLocalAlmox integer,
+	Constraint PK_Produto primary key(codProdutos),
+	Constraint FK_Almox foreign key(codLocalAlmox), references tabalmox(codLocalAlmox) ON UPDATE CASCADE ON DELETE RESTRICT
+) 
+
+e-mail: ricardo.dparizotto@gmail.com
+
+prova: 
+	-> Conversão do modelo conceitual para o físico; 80% (caso base: N : N, N : 1...)
+	-> Dependencias Funcionais 30%

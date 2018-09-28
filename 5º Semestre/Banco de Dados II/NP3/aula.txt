@@ -1,0 +1,45 @@
+CREATE FUNCTION saless(subtotal real)
+RETURNS real AS $$
+BEGIN
+ RETURN subtotal * 0.06;
+END;
+$$ LANGUAGE plpgsql;
+selec saless;
+
+CREATE FUNCTION atualizaCurriculo(int, int)
+ RETURNS boolean AS $$
+BEGIN
+ UPDATE teste SET a = $1 WHERE b = $2;
+
+ RETURN FOUND;
+END;
+$$ LANGUAGE 'plpgsql' ;
+select atualizaCurriculo(2, 1);
+
+CREATE OR REPLACE FUNCTION concat_selected_fields(in_t teste) RETURNS text
+AS $$
+BEGIN
+ RETURN concat(in_t.a , in_t.b);
+END;
+$$ LANGUAGE plpgsql;
+select concat_selected_fields(teste) from teste;
+
+CREATE or replace FUNCTION extended_teste(p_itemno int)
+RETURNS TABLE(quantity int, total numeric) AS $$
+BEGIN
+ RETURN QUERY SELECT s.a, s.b *1.5 FROM teste AS s
+ WHERE s.a >p_itemno;
+END;
+$$ LANGUAGE plpgsql;
+select extended_teste(1);
+
+CREATE OR REPLACE FUNCTION test(p int)
+RETURNS SETOF teste AS $$
+BEGIN
+ IF p = 1 THEN
+ RETURN QUERY SELECT * FROM teste;
+ END IF;
+ RETURN;
+END;
+$$ LANGUAGE plpgsql;
+SELECT test(3);

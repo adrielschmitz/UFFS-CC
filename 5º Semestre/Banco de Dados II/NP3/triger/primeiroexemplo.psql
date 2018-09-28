@@ -1,0 +1,19 @@
+CREATE or replace FUNCTION emp_time() RETURNS trigger AS $$
+	BEGIN
+		IF NEW.empname IS NULL THEN
+			RAISE EXCEPTION 'empname cannot be null';
+		END IF;
+		IF NEW.salary IS NULL THEN
+			RAISE EXCEPTION '% cannot have null salary', NEW.empname;
+		END IF;
+		NEW.last_date := current_timestamp;
+		NEW.last_user := current_user;
+		NEW.salary := salary * 1.10;
+		RETURN NEW;
+	END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER emp_time BEFORE INSERT OR UPDATE ON emp
+ FOR EACH ROW EXECUTE PROCEDURE emp_time();
+
+insert into emp(empname, salary) values ('joao2', 3000);

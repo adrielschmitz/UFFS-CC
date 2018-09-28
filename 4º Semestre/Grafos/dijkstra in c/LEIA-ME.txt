@@ -1,0 +1,12 @@
+---------------- ARQUIVO DE ENTRADA ----------------
+- O primeiro inteiro representa o vértice inicial
+- O restante do arquivo é formado pelas arestas do grafo:
+	(u v c): u->v e c o custo desta aresta
+
+---------------- DICA DE COMPILAÇÃO ----------------
+gcc -c priority_queue.c -o priority_queue.o
+gcc -c dijkstra.c -o dijkstra.o -Wall
+gcc dijkstra.o priority_queue.o -o dijkstra
+
+EXECUÇÃO:
+./dijkstra <entrada.in

@@ -1,0 +1,76 @@
+METRICAS DE SOFTWARE/ESTIMATIVAS:
+	- Não tem uma métrica específica;
+	- Dificuldade em medir e como avaliar os resultados da medições fietas;
+	- Possibilitam realizar o planejamento do projeto;
+	MEDIDA:
+		Fornece uma indicação quatitativa da extensão;
+	MEDIÇÃO:
+		Ato de determinação de uma medida;
+	MÉTRICA:
+		- Medida quantitativa do grau em que um sistema se encontra em relação a um 			  determinado atributo
+		PROPRIEDADES:
+			- Facilmente calculada, entendida e testada
+			- Possível de estudos estatísticos
+			- Expressa em alguma unidade 
+			- Estratégia de melhoria e etc.
+		POR QUE USAR?:
+			- Entender e aperfeiçoar o processo de desenvolvimento;
+			- Gerenciar contratos de softwares;
+			- Indicar a qualidade de um ponto do produto;
+			- Avaliar retorno de investimento e etc
+		BARREIRAS:
+			- Falta de comprometimento da alta gerencia;
+			- Medir custa caro;
+			- Grande mudança cultural necessária e etc
+		PERGUNTAS AO USO DE MÉTRICAS:
+			- Quanto tempo demorará para desenvolver;
+			- Estou avançando de forma controlada, garantia de entega a tempo?
+			- Qual o custo de cada atividade do processo?
+			- Qual a capacidade da equipe?
+			- Qual a qualidade do código que será gerado?
+			- Como medir a qualidade do produto?
+			- Onde estão os principais problemas?
+			- O cliente está satisfeito com o nosso produto?
+		RESPOSTAS:
+			-  As análises baseadas em métricas são mais eficientes do que as 			  	  que utilizam informações subjetivas;
+			- Utilizar dados históricos das métricas;
+		CATEGORIAS:
+			- DIRETAS:
+				CUSTO; ESFORÇO; QUANTIDADE DE LINHAS DE COD; 					VELOCIDADE DE EXECUÇÃO; NUMERO TOTAL DE 						DEFEITOS E ETC
+			- INDIRETAS:
+				QUALIDADE; EFICIÊNCIA; CONFIABILIDADE E ETC.
+	INDICADORES:
+		Combinação de Métricas que fornece uma compreensão de um processo, 			projeto ou produto.
+	MEDIÇÃO DE SOFTWARE:
+		- Pilar para a melhoria de processos de softwares;
+		- Gera informações uteis para que as organizações tomem decisões que 		  		  impactam em seus objetivos.
+		PAPEIS DA MEDIÇÃO:
+			- Entender; - Controlar; - Avaliar; - Prever  processos, produtos e 			  serviços de softwares;			
+			ENTENDER: O comportamento e o funcionamento de produtos do soft.
+			CONTROLAR: Processos, produtos e serviços de soft.
+			PREVER: valores de atributos;
+			AVALIAR: determinar padrões, metas e critérios de aceitação;
+	GQM:
+		OBJETIVO:
+			GARANTIR QUE TODOS OS DEFEITOS SEJAM CORRIGIDOS ANTES DO SOFTWARE SER ENTREGUE AO CLIENTE;
+		GOALS(OBJETIVOS):
+			- Reduzir defeitos;
+			- Aumentar a produtividade e etc;
+		QUESTION:
+			- Qual a taxa de defeitos atual?
+			- Qual a taxa de defeitos após a implementação do novo processo?
+		METRICAS:
+			- Numero de defeitos por produto
+			- Numero de defeitos por status	
+		EX: OBJETIVO: Aumentar a satisfação do cliente:
+			Q1: Qual o numero de reclamações do cliente por mes?
+			MÉTRICA 1: Contar o numero de reclamações por mes;
+			
+			Q2: Qual o percentual de cliente insatisfeitos?
+			METRICA2: (conreclam/numTotCli) * 100;
+			
+			Q3: Maior causador de insatisfação?
+			METRICA3: contar o numero de reclamações por categoria;
+
+			Q4: Percentual de clientes insatisfeitos por categoria:
+			METRICA2: (reclamCategoria / contReclam) * 100;	

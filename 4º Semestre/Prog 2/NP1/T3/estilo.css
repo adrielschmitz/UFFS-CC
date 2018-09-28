@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Arial;
+	background-color: #ffeff7;
+}
+form, input, textarea{
+	color: white;
+}
+div.caixa{
+	margin: auto;
+	width: 700px;
+	background-color: #222222; 
+	position: relative;
+	top: 50px;
+	border: 1px solid #262626;	
+}
+div.caixa label{
+	font-size: 12px;
+	display: block;
+	background-color: #8B8B83;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	padding: 10px 10px 10px;	
+}
+div.caixa label span{
+	display: block;
+	color: #bbbbbb;
+	float: left;
+	width: 100px;
+	text-align: right;
+	padding:5px 20px 0 0;
+}
+div.caixa .botao{
+	margin: 0 0 10px 0;
+	padding: 7px 7px;
+	width: 80px;
+	background: #ff0000;
+	border:1px double #ffffff;
+	display: 1px 1px;
+}

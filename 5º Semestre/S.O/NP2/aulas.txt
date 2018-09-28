@@ -1,0 +1,57 @@
+ENTRADA E SAÍDA:
+    RAID:
+        Nº0:
+            Vantagem: Nao tem redundância, se se perder uma informação, foice, já era pivete.
+            Desvantagem: Desempenho, pode-se ler e escrever simultaneamente.
+        Nº1:
+            Desvantagem: 
+                Replica-se, cada disco é uma cópia, daí tem-se redundância. Caso falhe, ainda tem-se uma cópia e pode                                seguir normalmente.
+            Vantagem: 
+                Tem-se o dobro do custo, toda operação de leitura ou escrita tem o dobro do custo, pq tem que escrever no principal                  e na cópia.
+        Nº2:
+        
+        Nº3:
+        
+    ESCALONAMENTO DE BRAÇO DE DISCO:
+        Shortest Seek First(SSF):
+            Atende o que está mais próximo da solicitação.
+        Elevador: 
+            Desce tudo e depois vai subindo.
+    ARMAZENAMENTO ESTÁVEL:
+        ESCRITA ESTÁVEL:
+            a) Verifica se a falha ocorreu antes de ser escrita no disco;
+            b) Falha no primeiro disco, por exemplo;
+            c) Falha após escrever no primeiro a falha ocorre quando vai escrever no segundo, só voltar e pegar no original;
+            d) Falha enquanto estou escrevendo no segundo, mesmo solução de cima;
+            e) Falha após copiar no primeiro e no segundo, tudo bem, as duas cópias já foram feitas;
+        
+SISTEMAS DE ARQUIVOS: (TCC = problema de escalonamento em rede distribuída)
+    Figura8.24(slide 25): 
+    Mesmo que se jogue um processo para outra máquina e o tráfego da rede diminua, pode ser que eu esguéle 
+    uma máquina, então nao é necessáriamente melhor. Essa máquina que tem um processo a mais terá que alocar 
+    mais memória pra ela, ela precisa processar mais... E vai que existe uma depêndencia de processos futuros 
+    em outra máquina que depende dassa máquina.
+
+    VIRTUALIZAÇÃO:
+        HYPERVISOR tipo 1: 
+            É ele que garante que as máquinas virtuais na entrem uma na região da outra. Só ele roda acima do kernel, ele que aloca              espaço para as máquinas virtuais.
+        HYPERVISOR tipo 1
+            Instala como se estivesse instalando em cima do próprio disco.
+        PARAVIRTUALIZAÇÃO:
+            Virtualização real: 
+                Instala como se fosse no próprio disco, nativo, normal.
+            Paravirtualização: 
+                Faz uma adaptação nesse sistema para que ele rode como se fosse nativo, sendo instalado no disco.
+        VMI:
+            interface de máquina virtual, forma uma camada de baixo nível que faz a interface padrão
+            (independente de hardware ou hipervisor) do SO hóspede modificado com o hardware ou hipervisor.
+        
+SEGURANÇA:
+    Bel la padula:
+        Escrita:
+            Mesmo nível ou todos acima.
+        Leitura: 
+            Mesmo nível ou todos abaixo.
+    
+    Biba:
+        Contrário do Bel la padula

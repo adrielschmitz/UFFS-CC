@@ -1,0 +1,11 @@
+# arquivo de configuração de dispositivos para o simulador
+
+%timer
+# port  int_type
+0x90008 0x07
+
+%lcd LCD
+# portcmd portdata color size
+# size can be 16x2, 20x2 or 20x4
+# color can be blue, green or amber
+0x90000 0x90001 blue 20x2  

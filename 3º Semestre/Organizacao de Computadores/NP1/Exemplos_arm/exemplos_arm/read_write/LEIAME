@@ -1,0 +1,54 @@
+Este exemplo mostra como utilizar as chamadas ao sistema 
+'read' e 'write'.
+
+O exemplo inicialmente escreve uma mensagem na console,
+e depois espera que uma linha seja digitada na console. 
+Quando a linha é digitada, o programa escreve a linha
+digitada e termina.
+
+Chamadas ao sistema utilizam a instrução 'svc 0x5555'. 
+
+-------------------------------------------------
+Chamada a sistema 'read'
+
+Em C, a chamada é:
+  int read(int fd, const void *buf, size_t count)
+
+Em assembler, antes de executar a instrução 'svc 0x55':
+     r0 deve conter o número de bytes a serem lidos
+     r1 deve conter o endereço inicial do buffer
+     r7 deve conter o descritor do arquivo (0 para stdin)
+
+Serão lidos até r0 caracteres ou final de linha
+(o que ocorrer antes). Ao final, r0 tem o número
+de bytes lidos.
+
+-------------------------------------------------
+Chamada a sistema 'write'
+
+Em C, a chamada é:
+  int write(int fd, const void *buf, size_t count)
+
+     r0 deve conter o número de bytes a serem escritos
+     r1 deve conter o endereço inicial da cadeia a ser escrita
+     r7 deve conter o descritor do arquivo (1 para stdout)
+
+Os caracteres são lidos da e escritos na console.
+
+-------------------------------------------------
+
+Para executar, use o montador
+
+arm-none-eabi-as -o test.o test.s
+
+depois o ligador
+
+arm-none-eabi-ld -T mapa.lds -o test test.o
+
+obtendo o arquivo executável de nome "test".
+
+Então inicie o simulador, utilizando a flag -c (para carregar a console)
+
+armsim -c -l test
+
+No simulador, execute "g _start".

@@ -1,0 +1,45 @@
+Meu nome é Adriel, estudo na universidade Federal da Fronteira Sul, faço Ciência 
+da Computação e gostaria de saber se vc tem 5 minutos pra responder umas perguntas...
+Preciso fazer trabalho pra matéria de engenharia de software. Basicamemnte, o 
+trabalho é simular a construção de um software, de um tema escolhido em sala. 
+Eu escolhi uma locadora de carros como tema e, como moro aqui perto, pensei 
+em vir nessa daqui. Nenhuma informação sigilosa será divulgada, não se preocupe.
+
+Então, preciso saber de algumas informações, siulando o desenvolvimento de um software
+pra loja de voces.
+
+REQUISITOS:
+		SOBRE A LOJA:
+			- Quantos funcionários trabalham aqui?
+			- Quantos anos estão no mercado?
+			- Único dono ou possui socios? 
+			- Voces oferecem limpeza dos veículos ou algo do tipo?
+			- Oferecem seguro dos carros?
+				Sim:
+					Como é esse serviço?
+			- Trabalham com alguma marca de carros em específica?
+		VENDAS:
+			NEGOCIAÇÃO DONOS DE CARROS:
+				- Valor de taxas por semana, mes...? 
+				- É cobrado uma taxa quando o carro é vendido? Se sim, quanto? 
+				CADASTRO DO DONO DO CARRO:
+					- Documentos necessários para deixar o carro na loja
+					- Formas de pagamentos (cartão, boleto, dinheiro)
+					- Emissão de comprovante
+			NEGOCIAÇÃO COMPRADORES DE CARROS:
+				- Documentos necessários para o cadastro do comprador do carro:
+				- Verifica se o nome está limpo
+				- Emite comprovante com as parcelas
+			CADASTRO DO CARRO:
+				- Verificação se o documento do carro está em dia
+				- Verificação se tem alguma restrição judicial
+				- Verificação do licenciamento
+				- Verificação do histórico do automóvel(furtos, multas e etc)
+				- Dados necessários para cadastramento do carro?
+				- Emição um comprovante 
+		FUNCIONÁRIOS:
+			CADASTRO:
+				- Dados necessários para o cadastro de novos funcionários?
+				- Como é a Hierarquia dos funcionários?
+		ESTOQUE:
+			- Cadastro de produtos (Nome, valor, quantidade)

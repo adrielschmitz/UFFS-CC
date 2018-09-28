@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Arial;
+	background-color: #363636;
+}
+form, input, textarea{
+	color: #00688B;
+}
+div.caixa{
+	margin: auto;
+	width: 500px;
+	background-color: #222222; 
+	position: relative;
+	top: 50px;
+	border: 1px solid #262626;	
+}
+div.caixa h1{
+	color: #ffffff;
+	font-size: 18px;
+	border-bottom: 1px solid #161712;
+	border-top: 1px solid #161712;
+	padding: 5px 0 5px 5px;
+}
+div.caixa label{
+	font-size: 12px;
+	display: block;
+	background-color: #8B8B83;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	padding: 10px 10px 10px;	
+}
+div.caixa label span{
+	display: block;
+	color: #bbbbbb;
+	float: left;
+	width: 100px;
+	text-align: right;
+	padding:5px 20px 0 0;
+}
+div.caixa .input_text{
+	width: 200px;
+	background: #EE4000;
+	border:2px double #333333;
+	display: 10px 10px;
+}
+div.caixa .mensagem{
+	width: 220px;
+	height: 158px;
+	background: #262626;
+	border: 2px double #333333;
+	padding: 7px 7px;
+	overflow: hidden;
+}
+div.caixa .botao{
+	margin: 0 0 10px 0;
+	padding: 7px 7px;
+	width: 80px;
+	background: #ff0000;
+	border:1px double #ffffff;
+	display: 1px 1px;
+}

@@ -1,0 +1,9 @@
+# arquivo de configuração de dispositivos para o simulador
+
+%leds Contador
+rrrr 0x90050
+
+%buttons Controle
+Conta 0x90030 0x06 P
+
+

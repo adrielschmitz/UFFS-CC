@@ -1,0 +1,7 @@
+TRIGER:
+    É um atilho e é considerado uma função.
+    Vantagem:
+        Agrupamento de instruções
+        Redução de rodadas entre servidor e cliente
+        Melhora a performace(com um preço muio alto a se pagar)
+    

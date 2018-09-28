@@ -1,0 +1,25 @@
+Este exemplo mostra como utilizar leds e botões, com o uso de interrupções.
+
+O exemplo tem um botão do tipo Push (Contador) e um conjunto de quatro
+leds vermelhos. Cada vez que o botão Conta é pressionado o valor
+mostrado nos leds (em binário) é incrementado.
+
+Para garantir que o ligador monte o vetor de interrupções no
+local correto (início da memória) é necessário passar um arquivo
+de mapa de memória para o ligador (linker.txt), usando a opção -T.
+
+Para executar, use o montador
+
+arm-none-eabi-as -o test.o test.s
+
+depois o ligador
+
+arm-none-eabi-ld -T mapa.lds -o test test.o
+
+obtendo o arquivo executável de nome "test".
+
+Então inicie o simulador
+
+armsim -l test -d devices.txt
+
+No simulador, execute "g _start".

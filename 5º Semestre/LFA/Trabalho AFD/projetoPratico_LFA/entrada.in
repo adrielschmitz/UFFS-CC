@@ -1,0 +1,7 @@
+se
+senao
+
+<S> ::= a<A> | e<A> | i<A> | o<A> | n<A> 
+<A> ::= a<A> | e<A> | i<A> | o<A> | n<A> | eps
+
+

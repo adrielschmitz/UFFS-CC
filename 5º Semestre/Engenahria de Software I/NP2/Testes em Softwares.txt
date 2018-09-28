@@ -1,0 +1,54 @@
+TESTES DE SOFTWARES:
+	VALIDAÇÃO:
+		- Construção do produto certo?
+	VERIFICAÇÃO:
+		- Construção do produto de forma correta?		
+	TIPO DE TESTES:
+		- FUNCIONAIS
+		- SEGURANÇA
+		- CARGA
+		- USABILIDADE
+		- DESEMPENHO
+		- INSTALAÇÃO
+	*Testas é verificar se o software está fazendo o que deveria fazer, atendendo aos requisitos*
+	Verificação:
+		- Está construindo o produto de forma correta
+	Validação:
+		- Está construindo o produto certo?
+	EXECUÇÃO DE TESTES:
+		- Se executar um programa ou modelo utilizando algumas entradas de dados;
+		- Após se verificar se o comportamento está  de acordo com o esperado;
+	FALHAS PODEM SER RESULTADO DE:
+		- Erro de requisitos
+		- Requisitos impossíveis de ser implementados
+		- O projeto pode conter defeitos;
+		- O codigo pode estar errado
+	MODELO EM V:
+		*Associação dos testes em todas as fases do processo de desenvolvimento, 		
+		relacionado as atividades que devem ser testadas para garantir a entrega de um produto de qualidade*
+	NÍVEIS DE TESTES MODELO V:
+		TESTES DE UNIDADE:
+			- Também conhecido como testes unitários;
+			- Explorar a menor unidade do projeto procurando provocar falhas ocasionadas por defeitos de lógica e de implementação em cada módulo.
+			- Cada unidade do sistema é verificada de forma isolada;
+			- Realizado pelo próprio programador
+		TESTES DE INTEGRAÇÃO:
+			- Apontar falhas decorrentes da integração entre unidade;
+			- Verificar a interação entre os componentes;
+			- Só pode ser feito após os testes unidades;
+		TESTE DE SISTEMA:
+			*Verificação de cada uma das funcionalidades do sistema*
+			- Testes executados nos mesmos ambientes
+			- Mesmas condições
+			- Mesmo dados que o usuário geralmente usaria
+		TESTE DE ACEITAÇÃO:
+			- Testado pelo usuário
+			- Verifica se todos os requisitos que o usuário queria são atendidos
+			- Testa as funcionalidades do sistema
+	TÉCNICAS DE TESTES:
+		CAIXA BRANCA:
+			- Avalia o comportamento interno do componente de software
+			- Tester tem acesso ao código
+		CAIXA PRETA:
+			- Testar o software numa perspectiva externa
+			- Verifica se é aquilo que era pra fazer mesmo

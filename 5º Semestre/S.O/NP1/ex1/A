@@ -1,0 +1,8 @@
+Foi substituído nas linhas 36, 40, 60 e 64 a função pthread_mutex_lock pela
+função pthread_mutex_trylock, a primeira função bloqueava instantaneamente 
+a thread, uma vez que o recurso requisitado não estivesse disponível. Já o 
+trylock verifica se o recurso está disponível mas não bloqueia, ele fica 
+tentando até que esse recurso esteja disponível. Para garantir que o trylock 
+funcionasse corretamente, foi estipuado um sleep(duas linhas abaixo de cada
+ocorrência de trylock) com um rand de 0 a 10, para que o trylock tentasse 
+ganhar o recurso após esse tempo.

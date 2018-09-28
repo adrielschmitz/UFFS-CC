@@ -1,0 +1,26 @@
+Dentro da pasta xv6, com o terminal aberto, digite os comandos:
+$make
+$make qemu
+Com o qemu sendo executado digite:
+teste
+
+Para realizar diferentes testes, com quantidades de bilhetes diferentes,
+edite o arquivo teste.c, adicionando ou removendo comentários na função 
+main, fazendo a combinação do numero de bilhetes de cada processo que desejar.
+
+Exemplo: Criação de processos com o mínimo(10) e com o máximo(70) de bilhetes:
+
+int main(void){
+    //for(;;){
+        test(1); // prioridade Minima
+    //    test(2); // prioridade Baixa
+    //    test(3); // prioridade Média
+    //    test(4); // prioridade Alta
+        test(5); // prioridade Extrema
+    //}
+    exit();
+}
+
+
+
+

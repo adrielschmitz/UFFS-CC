@@ -1,0 +1,36 @@
+{C:/Users/adrie/Desktop/UFFS/Sistemas Digitais/NP2/maquina_bo/Comparador.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/adrie/Desktop/UFFS/Sistemas Digitais/NP2/maquina_bo/Comparador.vhd}
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity menor_que
+-- Compiling architecture estrutura of menor_que
+
+} {} {}} {C:/Users/adrie/Desktop/UFFS/Sistemas Digitais/NP2/maquina_bo/BlocoControle.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/adrie/Desktop/UFFS/Sistemas Digitais/NP2/maquina_bo/BlocoControle.vhd}
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity maquina
+-- Compiling architecture estrutura of maquina
+
+} {} {}} {C:/Users/adrie/Desktop/UFFS/Sistemas Digitais/NP2/maquina_bo/Somador.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/adrie/Desktop/UFFS/Sistemas Digitais/NP2/maquina_bo/Somador.vhd}
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package NUMERIC_STD
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity somador
+-- Compiling architecture estrutura of somador
+
+} {} {}} {C:/Users/adrie/Desktop/UFFS/Sistemas Digitais/NP2/maquina_bo/Registrador.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/adrie/Desktop/UFFS/Sistemas Digitais/NP2/maquina_bo/Registrador.vhd}
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity registrador
+-- Compiling architecture estrutura of registrador
+
+} {} {}}

@@ -1,0 +1,8 @@
+# arquivo de configuração de dispositivos para o simulador
+
+%7segs Mostrador
+0x90000
+
+%keyboard Teclado
+0x90010 0x90011 0x0
+

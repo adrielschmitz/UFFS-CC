@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int p, i, j;//cria ponteiro para um inteiro
+	printf("Informe o número de posicoes de um vetor: ");
+	scanf("%d", &p);
+	int *j = malloc(sizeof(int)*p); //aloca memória
+	if(j){ //testa se memória foi alocada
+		printf("Memória alocada com sucesso.\n");
+	}else{
+		printf("Não foi possivel alocar a memória.\n");
+		return 0; //caso nao tenha alocado memória, finaliza o programa
+	}
+	printf("Informe os %d valores: ", p);
+	int vet[p];
+	for(i=0; i<p; i++){
+		scanf("%d", &vet[i]);	
+	}
+	for(j=i-1; j>=0; j--){
+		printf("%d ", vet[j]);
+	}
+	printf("\n");
+	free(*j); //libera a memória
+
+	return 0;
+}

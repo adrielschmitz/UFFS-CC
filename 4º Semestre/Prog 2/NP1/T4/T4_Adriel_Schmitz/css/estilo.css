@@ -1,0 +1,112 @@
+li.menu{
+    -moz-border-radius: 12px 12px 0 0; /* FF1+ */
+    -webkit-border-radius: 12px 12px 0 0; /* Saf3-4 */
+    border-radius: 9px 9px 9px 9px;
+    border:1px solid black;
+    display:inline;
+    list-style-type:none;
+    padding: 7px; /*tamanho das opções no menu*/
+}
+
+li.menu:hover{ /*cor de fundo quando é passado o mouse em cima das opçoes*/
+    background:white;
+}
+
+li a{
+    text-decoration:none; 
+    color:#ff7700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 10%;
+    font: inherit;
+    vertical-align: baseline;
+}
+#logo{ /*posição em que fica o logo do site*/
+    position: relative;
+    top: 10px;
+    left: 0px;
+}
+
+header {
+    background-color: #ffc375; /*cor do primeiro banner*/
+    color: #ff7700;
+    position: relative;
+    height: 205px;
+    padding:5px;
+}
+
+.menu-opcoes { /*posição em que as opçoes ficam na tela */
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.menu-opcoes ul{ /*tamanho da fonte das opções do menu*/
+    font-size:16px;
+}
+
+.menu-opcoes a{ /*menu das opções no baner principal*/
+    text-decoration: none;
+    color: black;
+}
+
+.menu-opcoes ul li { /*tamanho das opções do baner principal*/
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.banner{ /*corpo central do site*/
+    color: #ff7700;
+    margin: 0 auto;
+    width: 850px;
+}
+
+body { /*função para o backgroud de fundo do sinte inteiro*/
+    background-image: url(../image/fundo.jpg);
+    background-repeat: repeat;
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1{
+    font-size:30px;
+    color: #ff7200;
+    margin:10px;
+}
+
+p{ 
+    padding: 0px;
+    text-align: left; 
+    margin: 10px
+}
+
+#t1 { /*segundo banner, do "receita do dia"*/
+    background-color: #ffc375;
+    color: #ff7700;
+    padding: 15px;
+    margin: 20px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+figure{
+    background-color: white;
+    border: 1px groove #ccc;
+    text-align: left;
+    color: black;
+    padding: 15px;
+    margin: 30px;
+}
+    
+footer .container {
+  position: relative;
+}
+
+footer {
+  background-color: #ffc375;
+  clear: both;
+  padding: 50px 0;
+}

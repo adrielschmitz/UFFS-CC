@@ -1,0 +1,10 @@
+Message[305] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 113 : Using default destination of 1 (file).
+Message[302] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 125 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 127 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 129 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 143 : Found opcode in column 1. (MOVLW)
+Warning[203] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 144 : Found opcode in column 1. (MOVWF)
+Warning[203] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 145 : Found opcode in column 1. (CALL)
+Warning[207] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 153 : Found label after column 1. (BOTAO_PRESS)
+Warning[207] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 157 : Found label after column 1. (BOTAO_LIB)
+Warning[205] D:\UFFS\ORG\NP1\TAREFA 2 - RISC I\16F628A.ASM 165 : Found directive in column 1. (END)

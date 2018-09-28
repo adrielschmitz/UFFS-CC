@@ -1,0 +1,1 @@
+public class NegativeArraySizeException extends Exception{}

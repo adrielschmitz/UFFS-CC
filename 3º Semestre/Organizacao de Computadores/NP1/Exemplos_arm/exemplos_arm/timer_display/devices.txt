@@ -1,0 +1,7 @@
+# arquivo de configuração de dispositivos para o simulador
+
+%7segs Segundos
+0x90000
+
+%timer
+0x90008 6

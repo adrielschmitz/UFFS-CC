@@ -1,0 +1,23 @@
+Este exemplo mostra como utilizar botões e timer, com interrupção.
+
+O exemplo tem dois botões do tipo Push (Start e Stop), um mostrador
+de sete segmentos e um timer. O timer usa a interrupção IRQ e os botões
+usam a interrupção FIQ ("compartilhada" pelos dois botões). Cada vez que o 
+botão Start é pressionado o timer inicia, atualizando o mostrador a cada 
+segundo. Se o botão Stop é pressionado o timer é desativado.
+
+Para executar, use o montador
+
+arm-none-eabi-as -o test.o test.s
+
+depois o ligador
+
+arm-none-eabi-ld -T mapa.lds -o test test.o
+
+obtendo o arquivo executável de nome "test".
+
+Então inicie o simulador
+
+armsim -l test -d devices.txt
+
+No simulador, execute "g _start".

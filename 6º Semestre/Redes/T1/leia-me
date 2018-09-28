@@ -1,0 +1,61 @@
+// TRABALHO 1 DE REDES DE COMPUTADORES
+// ADRIEL SCHMITZ E MAICON BRANDÃO
+// CIÊNCIA DA COMPUTAÇÃO, 6º FASE
+// PROFESSOR MARCO AURELIO SPOHN
+
+-DICAS DE COMPILAÇÃO:
+	-Com o terminal aberto da pasta do trabalho execute os comandos abaixo:
+	-Fila de prioridade: gcc -c priority_queue.c -o priority_queue.o
+	-COMPILAÇÃO: gcc roteador.c funcoes.c priority_queue.o -o roteador -lpthread -Wall
+
+
+
+-IMPORTANTE:
+	- EXECUÇÃO: ./roteador N
+	  N é um inteiro indicando o ID do roteador que deseja instanciar
+	
+	- A topologia da rede pode ser alterada no arquivo enlaces.config
+
+	- Informacoes sobre a porta utilizada por cada roteador, seus endereços, estão no arquivo
+	  roteador.config
+
+	- Após instancias os roteadores, basta seguir as opções indicadas no menu.
+
+	- LOG: Relatório de LOG mostra a atividade realizada pelo roteador
+	
+	- Para verificar se um pacote passou pelo roteador utilize a opção "Atualizar" do menu
+
+	-Configuracoes importantes listadas abaixo estão no arquivo config.h:
+		- Numero de roteadores 
+		- Tamanho maximo da mensagem 
+		- Capacidade máxima da mensagem
+		
+	-Para alterar a forma de printagem para inteiros mude o define ASCII para 0 e
+	 o TPO para "%d" no arquivo config.h
+
+-ENLACE:
+	- O arquivo grafo.png mostra a topologia completa do arquivo padrão de entrada
+	- Os vértices vão de A a G, sendo seus ID de 0 a 6, respectivamente.
+
+-TESTANDO EM MÁQUINAS DIFERENTES:
+	-Para executar em máquinas diferentes certifique-se que o arquivo roteador.h
+	-Altere o ip(terceiro valor no arquivo) de acordo com a máquina que deseja enviar a mensagem:
+	EX:
+		0 45001 172.20.84.228
+		1 45002 172.20.84.228
+		2 45003 172.20.84.228
+		3 45004 172.20.84.228
+		4 45005 172.20.84.228
+		5 45006 172.20.84.197
+		6 45007 172.20.84.197
+
+	-Enviando uma mensagem do roteador "0" que passa pelo roteador "3", "5" e chega até o "6".
+	 O roteador "0" e o "3" devem ter o IP desta maquina, já o "5" e o "6" devem ter o IP da outra 		 
+	 máquina que o roteador será instanciado e vice-versa na outra máquina.
+
+	-OBTENDO ENDEREÇO DE IP PELO TERMINAL:
+		Para descobrir o IP da máquina local digite o seguinte comando no terminal.
+		$ ifconfig
+	-Copie (Ctrl+shift+c) o endereço de IP na linha inet, logo abaixo da linha eno1.
+	
+

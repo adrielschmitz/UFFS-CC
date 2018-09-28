@@ -1,0 +1,7 @@
+# arquivo de configuração de dispositivos para o simulador
+
+%leds On/Off
+rrrr 0x90110
+
+%buttons Comando
+Conta 0x90010 0x00 P

@@ -1,0 +1,33 @@
+create table fabricante(
+	fcod varchar(30) not null primary key,
+	fnome varchar(30) not null
+);
+
+create table modelo(
+	mcod integer not null primary key,
+	mnome varchar(30) not null,
+	fcod varchar(30) not null,
+	foreign key (fcod) references fabricante(fcod)
+);
+
+create table carro(
+	rnbr varchar(10) not null primary key,
+	km integer not null,
+	ano integer not null,
+	mcod integer not null,
+	motor float,
+	foreign key (mcod) references modelo(mcod)
+);
+create table proprietario(
+	pcod integer not null primary key,
+	pnome varchar(50) not null,
+	pemail varchar(30)
+);
+create table carro_prop(
+	pcod integer not null,
+	rnbr varchar(30) not null,
+	dtcompra date not null,
+	propatual char not null,
+	foreign key (pcod) references proprietario(pcod),
+	foreign key (rnbr) references carro(rnbr)
+)

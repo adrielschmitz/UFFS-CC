@@ -1,0 +1,6 @@
+# arquivo de configuração de dispositivos para o simulador armsim
+
+
+%leds Luzes
+rrrrrrrr 0x90000
+
