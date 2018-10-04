@@ -38,7 +38,7 @@
 	- Os vértices vão de A a G, sendo seus ID de 0 a 6, respectivamente.
 
 -TESTANDO EM MÁQUINAS DIFERENTES:
-	-Para executar em máquinas diferentes certifique-se que o arquivo roteador.h
+	-Para executar em máquinas diferentes certifique-se que o arquivo roteador.config está preenchido corretamente.
 	-Altere o ip(terceiro valor no arquivo) de acordo com a máquina que deseja enviar a mensagem:
 	EX:
 		0 45001 172.20.84.228
@@ -57,5 +57,3 @@
 		Para descobrir o IP da máquina local digite o seguinte comando no terminal.
 		$ ifconfig
 	-Copie (Ctrl+shift+c) o endereço de IP na linha inet, logo abaixo da linha eno1.
-	
-

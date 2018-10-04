@@ -125,7 +125,7 @@ void print_caixa_entrada(tipo info_msg, pacote_t pacote[]){
         printf("Desculpe, voce ainda não tem mensagens...\n");
     }else{
         for(int i=0; i<info_msg.qtd_msg; i++)
-            printf("|Destinatário ["TIPO"]: %s\n", pacote[i].origem+ASCII, pacote[i].mensagem);
+            printf("|REMETENTE ["TIPO"]: %s\n", pacote[i].origem+ASCII, pacote[i].mensagem);
     }
     printf("\n\nPressione ENTER para voltar...");
     getchar();
