@@ -8,8 +8,8 @@ char LOG[100];
 
 int main(int argc, char *argv[]){
     int opcao = -1, snum=0;
-    pacote_t aux_envio;
-    tipo info_msg;
+    pacote_t aux_envio;		//pacote auxiliar para escrever a mensagem
+    tipo info_msg;			// informações utilizadas para atualizar mensagem e outros afins
     
     //Trata erros no argumento
     if(argc < 2) die("Argumentos insuficientes, informe o [ID] do roteador a ser instanciado!");

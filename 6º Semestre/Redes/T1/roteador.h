@@ -17,7 +17,7 @@ typedef struct{                     // estrutura da tabela de roteamento
 
 pair grafoListaAdj[N_ROUT][N_ROUT], leTemp; // estrutura para o dijkstra
 
-struct sockaddr_in si_me;         // Socket para recebimento e envio de pacotes
+struct sockaddr_in si_me;         	// Socket para recebimento e envio de pacotes
 
 pthread_t receber_id;               // Declara uma thread para recebimento da mensagem
 
@@ -38,7 +38,7 @@ typedef struct{                     // estrutura para o roteador
 typedef struct{                     // estrutura do pacote que será enviado
   	int origem;                     // armazena o ID do roteador de origem
     int destino;                    // tem o ID do roteador de destino
-    int numero;                     // o numero do pacote. Ex: Pacote [3]...
+    int numero;                     // identificador do pacote. Ex: Pacote [3]...
   	char mensagem[MENSAGEM_SIZE];   // a mensagem que será enviada
 }pacote_t;
 

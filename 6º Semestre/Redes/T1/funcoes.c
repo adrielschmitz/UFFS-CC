@@ -93,7 +93,7 @@ void print_tabela_roteamento(pair tabela_roteamento[], int id){
     printf("\t+-----------------------------------------------+\n");
     printf("\t|TABELA DE ROTEAMENTO EM RELAÇÃO AO ROTEADOR ["TIPO"]|\n", id+ASCII);
     printf("\t|---------------+---------------+---------------|\n");
-    printf("\t|    Destino    | Proximo Salto |     Custo     |\n");
+    printf("\t|    Destino    | Próximo Salto |     Custo     |\n");
     printf("\t|---------------+---------------+---------------|\n");
     for(int w = 0; w<N_ROUT; w++){
         printf("\t|\t"TIPO"\t|\t"TIPO"\t|\t%d\t|\n", w+ASCII, tabela_roteamento[w].first+ASCII, tabela_roteamento[w].second);
