@@ -1,7 +1,6 @@
-se
-senao
+a
 
-<S> ::= a<A> | e<A> | i<A> | o<A> | n<A> 
-<A> ::= a<A> | e<A> | i<A> | o<A> | n<A> | eps
-
+<S> ::= a<A> | a<B>
+<A> ::= a<A> | a
+<B> ::= b<B> | b
 
